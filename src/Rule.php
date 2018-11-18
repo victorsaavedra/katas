@@ -1,6 +1,6 @@
 <?php namespace Katas;
 
-abstract class Rule implements FizzBuzzRuleInterface
+abstract class Rule
 {
     /** @var string */
     private $message;
