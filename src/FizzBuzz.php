@@ -28,4 +28,19 @@ class FizzBuzz
 
         return strval($integer);
     }
+
+    /**
+     * @param int[] $integers
+     * @return string
+     */
+    public function sayRange(array $integers): string
+    {
+        $result = array_map(
+            function(int $integer) {
+                return $this->say($integer);
+            }, $integers
+        );
+
+        return implode(' ', $result);
+    }
 }

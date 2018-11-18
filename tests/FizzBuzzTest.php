@@ -94,12 +94,8 @@ final class FizzBuzzTest extends TestCase
     {
         $fizzBuzz = FizzBuzzSetup::create();
         $expectedResult = '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz';
-        $result = [];
+        $result = $fizzBuzz->sayRange(range(1, 20));
 
-        foreach(range(1,20) as $integer) {
-            $result[] = $fizzBuzz->say($integer);
-        }
-
-        $this->assertEquals($expectedResult, implode(' ', $result));
+        $this->assertEquals($expectedResult, $result);
     }
 }
