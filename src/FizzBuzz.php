@@ -2,11 +2,11 @@
 
 class FizzBuzz
 {
-    /** @var Rule[] */
+    /** @var Rule[]|array */
     private $rules;
 
     /**
-     * @param Rule[] $rules
+     * @param Rule[]|array $rules
      */
     public function __construct(array $rules)
     {
@@ -19,10 +19,23 @@ class FizzBuzz
      */
     public function say(int $integer): string
     {
-        /** @var Rule $rule */
+        /** @var Rule|array $rule */
         foreach($this->rules as $rule) {
-            if ($rule->isMultiple($integer)) {
-                return $rule->say();
+            if (is_array($rule)) {
+                $result = true;
+                $say = '';
+                /** @var Rule $mulRule */
+                foreach($rule as $mulRule) {
+                    $result = $result && $mulRule->isMultiple($integer);
+                    $say .= $mulRule->say();
+                }
+                if ($result) {
+                    return $say;
+                }
+            } else {
+                if ($rule->isMultiple($integer)) {
+                    return $rule->say();
+                }
             }
         }
 
