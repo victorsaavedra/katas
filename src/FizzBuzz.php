@@ -19,14 +19,17 @@ class FizzBuzz
      */
     public function say(int $integer): string
     {
+        $multiple = false;
+        $say = '';
         /** @var Rule $rule */
         foreach($this->rules as $rule) {
             if ($rule->isMultiple($integer)) {
-                return $rule->say();
+                $multiple = true;
+                $say.= $rule->say();
             }
         }
 
-        return strval($integer);
+        return $multiple ? $say : strval($integer);
     }
 
     /**
