@@ -1,6 +1,11 @@
 <?php namespace Katas\Rules;
 
-class FizzBuzzRule
-{
+use Katas\Rule;
 
+class FizzBuzzRule extends Rule
+{
+    public function __construct()
+    {
+        parent::createRule('FizzBuzz', 15);
+    }
 }

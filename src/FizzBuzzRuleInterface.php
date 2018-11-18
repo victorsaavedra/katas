@@ -1,8 +1,8 @@
 <?php namespace Katas;
 
-interface FizzBuzzRule
+interface FizzBuzzRuleInterface
 {
     public function isMultiple(int $integer): bool;
 
-    public function canSay(): string;
+    public function say(): string;
 }
