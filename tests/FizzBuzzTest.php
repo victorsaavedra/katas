@@ -93,7 +93,7 @@ final class FizzBuzzTest extends TestCase
     public function testRangeOf20(): void
     {
         $fizzBuzz = FizzBuzzSetup::create();
-        $expectedResult = '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz';
+        $expectedResult = '1 2 Fizz 4 Buzz Fizz Bang 8 Fizz Buzz 11 Fizz 13 Bang FizzBuzz 16 17 Fizz 19 Buzz FizzBang 22 23 Fizz Buzz 26 Fizz Bang 29 FizzBuzz 31 32 Fizz 34 BuzzBang Fizz 37 38 Fizz Buzz 41 FizzBang 43 44 FizzBuzz 46 47 Fizz Bang Buzz Fizz 52 53 Fizz Buzz Bang Fizz 58 59 FizzBuzz 61 62 FizzBang 64 Buzz Fizz 67 68 Fizz BuzzBang 71 Fizz 73 74 FizzBuzz 76 Bang Fizz 79 Buzz Fizz 82 83 FizzBang Buzz 86 Fizz 88 89 FizzBuzz Bang 92 Fizz 94 Buzz Fizz 97 Bang Fizz Buzz 101 Fizz 103 104 FizzBuzzBang 106 107 Fizz 109 Buzz Fizz Bang 113 Fizz Buzz 116 Fizz 118 Bang FizzBuzz 121 122 Fizz 124 Buzz FizzBang 127 128 Fizz Buzz 131 Fizz Bang 134 FizzBuzz 136 137 Fizz 139 BuzzBang Fizz 142 143 Fizz Buzz 146 FizzBang 148 149 FizzBuzz';
         $result = $fizzBuzz->sayRange(range(1, 150));
 
         $this->assertEquals($expectedResult, $result);

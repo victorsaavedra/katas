@@ -2,10 +2,10 @@
 
 use Katas\Rule;
 
-class FizzBuzzRule extends Rule
+class FizzBangRule extends Rule
 {
     public function __construct()
     {
-        parent::createRule('FizzBuzz', 15);
+        parent::createRule('FizzBang', 3*7);
     }
 }

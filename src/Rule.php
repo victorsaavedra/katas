@@ -20,7 +20,7 @@ abstract class Rule
      */
     public function isMultiple(int $integer): bool
     {
-        return $integer % $this->isMultipleOf === 0;
+        return ($integer % $this->isMultipleOf) === 0;
     }
 
     public function say(): string
