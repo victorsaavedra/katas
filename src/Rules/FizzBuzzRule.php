@@ -6,6 +6,6 @@ class FizzBuzzRule extends Rule
 {
     public function __construct()
     {
-        parent::createRule('FizzBuzz', 15);
+        parent::createRule('FizzBuzz', 3*5);
     }
 }
